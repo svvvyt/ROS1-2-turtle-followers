@@ -1,0 +1,32 @@
+<launch>
+	<param name ="turtles_count" value="6"/>
+	<node pkg="turtlesim" type="turtlesim_node" name="simulator"/>
+	<node pkg="turtlesim" type="turtle_teleop_key" name="input_handling"/>
+
+	<node pkg="follower" type="spawner.py" name="spawner_node"/>
+
+	<node pkg="follower" type="follower.py" name="follower_node_1" output="screen">
+		<param name ="this_turtle_id" value="2"/>
+		<param name ="follow_turtle_id" value="1"/>
+	</node>
+	<node pkg="follower" type="follower.py" name="follower_node_2" output="screen">
+		<param name ="this_turtle_id" value="3"/>
+		<param name ="follow_turtle_id" value="2"/>
+	</node>
+	<node pkg="follower" type="follower.py" name="follower_node_3" output="screen">
+		<param name ="this_turtle_id" value="4"/>
+		<param name ="follow_turtle_id" value="3"/>
+	</node>
+	<node pkg="follower" type="follower.py" name="follower_node_4" output="screen">
+		<param name ="this_turtle_id" value="5"/>
+		<param name ="follow_turtle_id" value="4"/>
+	</node>
+	<node pkg="follower" type="follower.py" name="follower_node_5" output="screen">
+		<param name ="this_turtle_id" value="6"/>
+		<param name ="follow_turtle_id" value="5"/>
+	</node>
+	<node pkg="follower" type="follower.py" name="follower_node_6" output="screen">
+		<param name ="this_turtle_id" value="7"/>
+		<param name ="follow_turtle_id" value="6"/>
+	</node>
+</launch>

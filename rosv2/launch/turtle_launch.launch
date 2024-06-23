@@ -1,0 +1,26 @@
+<launch>
+  <node pkg="turtlesim" exec="turtlesim_node" name="turtlesim_node1"/>
+  <node pkg="turtle_follower" exec="spawner_node" name="turtle_generator">
+    <param name="turtles_count" value="5"/>
+  </node>
+  <node pkg="turtle_follower" exec="follower_node" name="follower_node1">
+    <param name="speed" value="1.0"/>
+    <param name="index" value="1"/>
+  </node>
+  <node pkg="turtle_follower" exec="follower_node" name="follower_node2">
+    <param name="speed" value="1.0"/>
+    <param name="index" value="2"/>
+  </node>
+  <node pkg="turtle_follower" exec="follower_node" name="follower_node3">
+    <param name="speed" value="1.0"/>
+    <param name="index" value="3"/>
+  </node>
+  <node pkg="turtle_follower" exec="follower_node" name="follower_node4">
+    <param name="speed" value="1.0"/>
+    <param name="index" value="4"/>
+  </node>
+  <node pkg="turtle_follower" exec="follower_node" name="follower_node5">
+    <param name="speed" value="1.0"/>
+    <param name="index" value="5"/>
+  </node>
+</launch>
